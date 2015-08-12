@@ -11,7 +11,7 @@ cd ~/build-couchdb
 ##### that if you're absolutely sure; and you know how to amend all of the next steps to suit...!
 export INSTPRE=/opt/couchdb
 sudo mkdir $INSTPRE
-mkdir -p $INSTPRE/var/log
+# mkdir -p $INSTPRE/var/log
 # mkdir -p $INSTPRE/var/lib/
 ####
 rake erl_checkout="OTP_R16B03-1" \
