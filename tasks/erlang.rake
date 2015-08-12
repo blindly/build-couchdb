@@ -41,7 +41,7 @@ namespace :erlang do
         optimization_level = 2
         optimization_level = 0 if DISTRO[0] == :osx && /^11\.\d+\./.match(DISTRO[1]) # OS X 11.*
 
-        cflags = "-g -O#{optimization_level} -fno-strict-aliasing"
+        cflags = "-g -O#{optimization_level} -fno-strict-aliasing -DOPENSSL_NO_EC=1"
         ldflags = ''
         if DISTRO[0] == :solaris
           cflags += ' -I/opt/csw/include -L/opt/csw/lib'
